@@ -120,24 +120,5 @@ def kick_user(name, ban=False):
     else:
         broadcast(f'{name} not found'.encode('ascii'))
 
-# def kick_user(identifier, ban=False):
-#     if ban:
-#         # Add the banned IP address to bans.txt file
-#         with open('bans.txt', 'a') as f:
-#             f.write(f'{identifier}\n')
-
-#     for c, addr in zip(clients, addresses):
-#         if addr[0] == identifier:
-#             c.send(f'You were kicked by the admin{" and banned" if ban else ""}'.encode('ascii'))
-#             c.close()
-#             index = clients.index(c)
-#             clients.remove(c)
-#             nickname = nicknames[index]
-#             broadcast(f'{nickname} was kicked by an admin'.encode('ascii'))
-#             nicknames.remove(nickname)
-
-
-
-
 print("server is listening")
 receive()
